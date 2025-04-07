@@ -54,3 +54,9 @@ app.get("/pharmach_list", (req, res) => {
         res.json(response.data.response.body);
     });        
 }); 
+
+
+// index02.html에 접근 가능하도록 라우팅 추가
+app.get("/index02", (req, res) => {
+    res.sendFile(__dirname + "/public_html/index02.html");
+});
